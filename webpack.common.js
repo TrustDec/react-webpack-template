@@ -10,8 +10,13 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
+            title: 'React Webpack',
             filename: 'index.html',
             template: path.join(__dirname, 'src/index.html')
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'favicon.ico',
+            template: path.join(__dirname, 'src/favicon.ico')
         }),
         new webpack.DefinePlugin({
             'process.env': {
